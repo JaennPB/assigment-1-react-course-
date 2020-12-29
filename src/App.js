@@ -9,6 +9,7 @@ class App extends Component {
   };
 
   // turned into event listerner (eventlistener is calling this function), therefore, will get event parameter
+  // an arrow function is needed so that the this. keyword will not bind to the event listener which called it
   changeUsernameHandler = (e) => {
     this.setState({
       username: e.target.value,
