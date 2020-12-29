@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Output from "./components/UserOutput.js";
-import Input from "./components/UserInput.js";
+import Output from "./UserOutput/UserOutput.js";
+import Input from "./UserInput/UserInput.js";
 import "./App.css";
 
 class App extends Component {
@@ -8,11 +8,11 @@ class App extends Component {
     username: "Jay Buccio (default)",
   };
 
-  changeUsername = (e) => {
+  // turned into event listerner (eventlistener is calling this function), therefore, will get event parameter
+  changeUsernameHandler = (e) => {
     this.setState({
       username: e.target.value,
     });
-    console.log("changed");
   };
 
   render() {
@@ -26,9 +26,9 @@ class App extends Component {
     return (
       <div className="App">
         <Input
-          username={this.state.username}
-          inputValue={this.changeUsername}
+          inputValue={this.changeUsernameHandler}
           style={style}
+          defaultName={this.state.username}
         />
         <Output username={this.state.username} />
         <Output username="Phoebe of Jupiter" />
