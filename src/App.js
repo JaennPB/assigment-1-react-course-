@@ -5,12 +5,12 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    username: "Jay Buccio",
+    username: "Jay Buccio (default)",
   };
 
-  changeUsername = () => {
+  changeUsername = (e) => {
     this.setState({
-      username: "Jay Buccio",
+      username: e.target.value,
     });
     console.log("changed");
   };
@@ -18,9 +18,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Input inputValue={this.changeUsername} />
+        <Input
+          username={this.state.username}
+          inputValue={this.changeUsername}
+        />
         <Output username={this.state.username} />
-        <Output username="Jay Poumian Buccio" />
+        <Output username="Phoebe of Jupiter" />
       </div>
     );
   }
