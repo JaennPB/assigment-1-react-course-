@@ -4,6 +4,7 @@ const Output = (props) => {
   return (
     <div>
       <p>
+        Username: {props.username} <br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh est,
         imperdiet vitae ante in, posuere tincidunt mi. Aliquam ac sem nulla.
         Phasellus justo ipsum, vulputate nec nibh sed, condimentum elementum
