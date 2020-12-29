@@ -16,18 +16,10 @@ class App extends Component {
   };
 
   render() {
-    const style = {
-      padding: "10px",
-      marginLeft: "10px",
-      borderRadius: "5px",
-      backgroundColor: "aliceblue",
-    };
-
     return (
       <div className="App">
         <Input
           inputValue={this.changeUsernameHandler}
-          style={style}
           defaultName={this.state.username}
         />
         <Output username={this.state.username} />
